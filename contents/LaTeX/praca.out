@@ -1,0 +1,49 @@
+\BOOKMARK [0][-]{chapter.1}{Cel Pracy}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Wstep}{}% 2
+\BOOKMARK [0][-]{chapter.3}{Nawigacje dla rowerzyst\363w}{}% 3
+\BOOKMARK [1][-]{section.3.1}{Specyfika tematu}{chapter.3}% 4
+\BOOKMARK [1][-]{section.3.2}{Istniejace rozwiazania}{chapter.3}% 5
+\BOOKMARK [1][-]{section.3.3}{Aplikacje webowe}{chapter.3}% 6
+\BOOKMARK [1][-]{section.3.4}{Aplikacje mobilne}{chapter.3}% 7
+\BOOKMARK [0][-]{chapter.4}{Charakterystyka srodowisk}{}% 8
+\BOOKMARK [1][-]{section.4.1}{Urzadzenia mobilne z systemem iOS}{chapter.4}% 9
+\BOOKMARK [1][-]{section.4.2}{Srodowisko webowe}{chapter.4}% 10
+\BOOKMARK [2][-]{subsection.4.2.1}{Przegladarki web na popularne systemy operacyjne}{section.4.2}% 11
+\BOOKMARK [1][-]{section.4.3}{Dane geoprzestrzenne}{chapter.4}% 12
+\BOOKMARK [2][-]{subsection.4.3.1}{Dane urzedu miasta krakowa na temat sciezek rowerowych \(CartoDB\)}{section.4.3}% 13
+\BOOKMARK [2][-]{subsection.4.3.2}{Dane spolecznosci rowerowej \(DaroPlan\)}{section.4.3}% 14
+\BOOKMARK [2][-]{subsection.4.3.3}{OpenStreetMap oraz Apple Maps}{section.4.3}% 15
+\BOOKMARK [1][-]{section.4.4}{Uzyte algorytmy}{chapter.4}% 16
+\BOOKMARK [2][-]{subsection.4.4.1}{Algorytm Dijkstry}{section.4.4}% 17
+\BOOKMARK [2][-]{subsection.4.4.2}{Algorytm A*}{section.4.4}% 18
+\BOOKMARK [2][-]{subsection.4.4.3}{Metoda Haversine}{section.4.4}% 19
+\BOOKMARK [1][-]{section.4.5}{Wykorzystane jezyki programowania}{chapter.4}% 20
+\BOOKMARK [2][-]{subsection.4.5.1}{Jezyk programowania JavaScript}{section.4.5}% 21
+\BOOKMARK [2][-]{subsection.4.5.2}{Biblioteka ReactJS}{section.4.5}% 22
+\BOOKMARK [2][-]{subsection.4.5.3}{Jezyk programowania Swift}{section.4.5}% 23
+\BOOKMARK [1][-]{section.4.6}{Uzyte narzedzia}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.4.6.1}{Srodowisko programistyczne Xcode}{section.4.6}% 25
+\BOOKMARK [2][-]{subsection.4.6.2}{Narzedzie do testowania API Postman}{section.4.6}% 26
+\BOOKMARK [2][-]{subsection.4.6.3}{System kontroli wersji Git}{section.4.6}% 27
+\BOOKMARK [0][-]{chapter.5}{Tworzenie oprogramowania}{}% 28
+\BOOKMARK [1][-]{section.5.1}{Opis uzytej technologii i bibliotek}{chapter.5}% 29
+\BOOKMARK [2][-]{subsection.5.1.1}{Opis udostepnionych endpoint\363w}{section.5.1}% 30
+\BOOKMARK [2][-]{subsection.5.1.2}{Proces wyznaczania grafu na podstawie pobranych danych}{section.5.1}% 31
+\BOOKMARK [2][-]{subsection.5.1.3}{Opis procesu wyznaczania trasy dla uzytkownika}{section.5.1}% 32
+\BOOKMARK [1][-]{section.5.2}{Opis stworzonej aplikacji mobilnej}{chapter.5}% 33
+\BOOKMARK [2][-]{subsection.5.2.1}{Opis technologii}{section.5.2}% 34
+\BOOKMARK [2][-]{subsection.5.2.2}{Schemat klas aplikacji mobilnej}{section.5.2}% 35
+\BOOKMARK [2][-]{subsection.5.2.3}{Spis ekran\363w i stan\363w aplikacji}{section.5.2}% 36
+\BOOKMARK [2][-]{subsection.5.2.4}{Opis dzialania nawigacji}{section.5.2}% 37
+\BOOKMARK [2][-]{subsection.5.2.5}{Opis test\363w}{section.5.2}% 38
+\BOOKMARK [1][-]{section.5.3}{Opis stworzonej strony internetowej}{chapter.5}% 39
+\BOOKMARK [2][-]{subsection.5.3.1}{Opis technologii i uzytych bibliotek}{section.5.3}% 40
+\BOOKMARK [2][-]{subsection.5.3.2}{Spis ekran\363w, opis dzialania}{section.5.3}% 41
+\BOOKMARK [0][-]{chapter.6}{Analiza otrzymanych wynik\363w}{}% 42
+\BOOKMARK [1][-]{section.6.1}{Analiza dzialania uzytych algorytm\363w}{chapter.6}% 43
+\BOOKMARK [2][-]{subsection.6.1.1}{Por\363wnanie dzialania algorytmu z wykorzystaniem algorytmu Dijkstra i A*}{section.6.1}% 44
+\BOOKMARK [2][-]{subsection.6.1.2}{Czas dzialania algorytmu A* i Dijkstra w zaleznosci od dlugosci trasy}{section.6.1}% 45
+\BOOKMARK [2][-]{subsection.6.1.3}{Por\363wnanie algorytmu zachlannego A* i standardowej implementacji A*}{section.6.1}% 46
+\BOOKMARK [2][-]{subsection.6.1.4}{Por\363wnanie algorytmu NBA i standardowej implementacji A*}{section.6.1}% 47
+\BOOKMARK [1][-]{section.6.2}{Por\363wnanie wynik\363w w stosunku do tras wyznaczonych przez Google Maps}{chapter.6}% 48
+\BOOKMARK [0][-]{chapter.7}{Wnioski i mozliwe dalsze usprawnienia}{}% 49
