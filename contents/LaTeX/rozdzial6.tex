@@ -30,9 +30,13 @@ Na podstawie wzoru widać że złożoność algorytmu A* w dużej mierze zależy
 
 Na poniższych wykresach przedstawiono czas działania algorytmu A* i Dijkstra w zależności od obszaru objętego przeszukiwaniem. W tym celu na terenie Krakowa wyznaczono zestaw tras w zakresie od bardzo krótkich, obejmujących tylko kilkaset metrów do takich obejmujących teren całego Krakowa.
 
+\begin{center}
 \includegraphics[width=\textwidth]{a_a_dlugosc_trasy}
+\end{center}
 
+\begin{center}
 \includegraphics[width=\textwidth]{dijkstra_a_dlugosc_trasy}
+\end{center}
 
 Z przedstawionych wykresów można odczytać że czas działania algorytmu Dijkstra nie zależy od długości wyznaczonych tras. Delikatne fluktuacje czasu wykonania zależą od aktualnego użycia pamięci i procesora komputera podczas wykonywania testu. Jest to spowodowane zasadą działania algorytmu Dijkstra, który w każdym przypadku w pierwszej kolejności wykonuje obliczenia najkrótszych ścieżek pomiędzy wszystkimi wierzchołkami grafu.
 Przeciwny przypadek obowiązuje dla algorytmu A* który dzięki zastosowaniu heurystyki jest w stanie wykryć gdy najkrótsza ścieżka została już odnaleziona i zatrzymać przeszukiwanie w odpowiednim przypadku. Z tego powodu w zależności od obszaru grafu obejmowanego przez przeszukanie, algorytm A* wykazuje znaczny, liniowy wzrost czasu wykonania.
@@ -42,13 +46,17 @@ Przeciwny przypadek obowiązuje dla algorytmu A* który dzięki zastosowaniu heu
 Kolejnym etapem analizy jest określenie czasu oraz jakości działania algorytmu zachłannego A* w stosunku do podstawowej wersji A*. W przeciwieństwie do standardowej implementacji, algorytm zachłanny, zyskując na czasie wykonania, nie gwarantuje wyznaczenia optymalnej ścieżki pomiędzy wierzchołkiem początkowym i końcowym. Bazując na przekazanej heurystyce, stara się wyznaczyć najlepsze lokalne rozwiązania podzbiorów składających się na wynikową trasę, następnie łączy uzyskane podzbiory w celu wyznaczenia trasy. W poniższych akapitach zawarto analizę czasu wykonania oraz wyznaczonych wag tras w zależności od typu algorytmu.
 Na poniższym wykresie przedstawiono zestawienie wag tras wyznaczonych przez obydwa algorytmy dla uprzednio wyznaczonego zestawy ścieżek testowych.
 
+\begin{center}
 \includegraphics[width=\textwidth]{waga_a_vs_a_greedy}
+\end{center}
 
 Korzystając z wartości przedstawionych na powyższym wykresie można odczytać że poza przypadkiem bardzo krótkiej drogi pomiędzy ulicami Nawojki i Wrocławską, zachłanna odmiana algorytmu A* w każdym wypadku wyznaczyła trasę która z punktu widzenia waga jest gorsza niż ta wyznaczona przez standardową odmianę algorytmu A*.
 
 Na poniższym wykresie przedstawiono zestawienie czasu działania dla uprzednio wyznaczonego zestawu testowych ścieżek.
 
+\begin{center}
 \includegraphics[width=\textwidth]{czas_a_vs_a_greedy}
+\end{center}
 
 Za wyjątkiem jednego przypadku, który może być spowodowany chwilową mniejszą wydajnością maszyny na której działały testy, algorytm zachłanny uzyskał lepszy średni czas wyznaczania trasy. Jest to spodziewane, ponieważ algorytm ten w swojej zasadzie działania stara się optymalizować czas wykonania kosztem jakości. Różnice w czasie działania dla większości przypadków są bardzo niewielkie, sumując je z brakiem gwarancji wyznaczenia trasy optymalnej, algorytm zachłanny A* nie znajduje zastosowania do użycia w stworzonym algorytmie.
 
@@ -57,7 +65,9 @@ Za wyjątkiem jednego przypadku, który może być spowodowany chwilową mniejsz
 W celu dalszej analizy możliwych usprawnień dla czasu działania algorytmu, został zaimplementowany i porównany także algorytm NBA*(New Bidirectional A*). Jest to odmiana algorytmu A* który w celu optymalizacji czasu działania jednocześnie rozpoczyna swoje wykonywanie z punktu końcowego do punktu początkowego oraz w przeciwną stronę. Złożoność obliczeniowa wykonania obydwu algorytmów pozostaje taka sama, jednak istnieje możliwość wykonywania dwóch algorytmów przy wykorzystaniu dwóch rdzeni procesora, dzięki czemu czas obliczeń ulega znacznej poprawie. W przeciwieństwie do algorytmu zachłannego, algorytm NBA gwarantuje każdorazowe wyszukanie optymalnej trasy w grafie.
 Na poniższym wykresie przedstawiono zestawienie czasów działania algorytmów. W celu otrzymania porównywalnych wyników, porównania zostały także przeprowadzone dla tego samego zestawu danych testowych.
 
+\begin{center}
 \includegraphics[width=\textwidth]{czas_a_vs_nba}
+\end{center}
 
 Z uzyskanych wyników można odczytać że algorytm NBA daje możliwość uzyskania nieznacznie mniejszych czasów obliczeń. Same różnice nie są duże, ale znikomym nakładem pozwalają nieznacznie obniżyć wykorzystanie zasobów serwera w przypadku gdy aplikacja jest używana przez znaczną ilość ludzi. Z wykresu można także odczytać nieznaczny trend w kierunku zwiększenia różnic wykonania algorytmu w przypadku gdy trasy są dłuższe. Jest to spowodowane faktem że zasoby czasowe potrzebne na alokację oraz rozpoczęcie procedury przeszukiwania grafu z obydwu stron mogą być skompensowane przez rzeczywisty zysk uzyskany przez samą procedurę przeszukiwania. Czas obliczeń dla tras o długości 800-2000m jest w przypadku obydwu algorytmów prawie taki sam.
 
