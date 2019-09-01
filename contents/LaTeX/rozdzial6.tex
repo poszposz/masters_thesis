@@ -30,9 +30,9 @@ Na podstawie wzoru widać że złożoność algorytmu A* w dużej mierze zależy
 
 Na poniższych wykresach przedstawiono czas działania algorytmu A* i Dijkstra w zależności od obszaru objętego przeszukiwaniem. W tym celu na terenie Krakowa wyznaczono zestaw tras w zakresie od bardzo krótkich, obejmujących tylko kilkaset metrów do takich obejmujących teren całego Krakowa.
 
-\includegraphics[width=16cm]{a_a_dlugosc_trasy}
+\includegraphics[width=\textwidth]{a_a_dlugosc_trasy}
 
-\includegraphics[width=16cm]{dijkstra_a_dlugosc_trasy}
+\includegraphics[width=\textwidth]{dijkstra_a_dlugosc_trasy}
 
 Z przedstawionych wykresów można odczytać że czas działania algorytmu Dijkstra nie zależy od długości wyznaczonych tras. Delikatne fluktuacje czasu wykonania zależą od aktualnego użycia pamięci i procesora komputera podczas wykonywania testu. Jest to spowodowane zasadą działania algorytmu Dijkstra, który w każdym przypadku w pierwszej kolejności wykonuje obliczenia najkrótszych ścieżek pomiędzy wszystkimi wierzchołkami grafu.
 Przeciwny przypadek obowiązuje dla algorytmu A* który dzięki zastosowaniu heurystyki jest w stanie wykryć gdy najkrótsza ścieżka została już odnaleziona i zatrzymać przeszukiwanie w odpowiednim przypadku. Z tego powodu w zależności od obszaru grafu obejmowanego przez przeszukanie, algorytm A* wykazuje znaczny, liniowy wzrost czasu wykonania.
