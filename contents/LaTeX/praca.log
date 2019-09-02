@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.9.1)  2 SEP 2019 23:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.9.2)  3 SEP 2019 00:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1386,7 +1386,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
@@ -1394,8 +1399,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--13
 
 
 
-] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+]
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+
+ []
+
+
+Underfull \vbox (badness 1038) has occurred while \output is active []
+
+ [16]
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
 [][]$\T1/ptm/m/it/10.95 bazowy _ adres _ url / api / routes / ^^\ndOptimized ? 
 startLocation = romera & endLocation = karmelicka &
  []
@@ -1403,99 +1421,112 @@ startLocation = romera & endLocation = karmelicka &
 <./images/api_response_json.png, id=326, 719.68875pt x 890.32625pt>
 File: ./images/api_response_json.png Graphic file (type png)
 <use ./images/api_response_json.png>
-Package pdftex.def Info: ./images/api_response_json.png  used on input line 40.
+Package pdftex.def Info: ./images/api_response_json.png  used on input line 42.
 
 (pdftex.def)             Requested size: 275.98836pt x 341.43306pt.
-[17 <./images/api_response_json.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
 [][]$\T1/ptm/m/it/10.95 bazowy _ adres _ url / api / routes / visualizationPoin
 ts ? startLocation = romera & endLocation =
  []
 
-<./images/api_response_viz_json.png, id=336, 262.9825pt x 498.86375pt>
+<./images/api_response_viz_json.png, id=334, 262.9825pt x 498.86375pt>
 File: ./images/api_response_viz_json.png Graphic file (type png)
 <use ./images/api_response_viz_json.png>
 Package pdftex.def Info: ./images/api_response_viz_json.png  used on input line
- 61.
+ 63.
 (pdftex.def)             Requested size: 179.99745pt x 341.43306pt.
-[18 <./images/api_response_viz_json.png>]
-<./images/algorytm_schemat_blokowy.png, id=343, 630.355pt x 824.07875pt>
+[18 <./images/api_response_json.png>]
+<./images/algorytm_schemat_blokowy.png, id=342, 630.355pt x 824.07875pt>
 File: ./images/algorytm_schemat_blokowy.png Graphic file (type png)
 <use ./images/algorytm_schemat_blokowy.png>
 Package pdftex.def Info: ./images/algorytm_schemat_blokowy.png  used on input l
-ine 71.
+ine 73.
 (pdftex.def)             Requested size: 455.24411pt x 595.15955pt.
- [19 <./images/algorytm_schemat_blokowy.png>]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20]
-Underfull \hbox (badness 10000) in paragraph at lines 87--89
+ [19 <./images/api_response_viz_json.png>]
+Underfull \vbox (badness 2253) has occurred while \output is active []
+
+ [20 <./images/algorytm_schemat_blokowy.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+Underfull \hbox (badness 10000) in paragraph at lines 89--91
 
  []
 
-[21] [22]
-Underfull \vbox (badness 6641) has occurred while \output is active []
+[22] [23]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23]
-<./images/navi_initial.png, id=366, 1129.21875pt x 2445.135pt>
+ [24]
+<./images/navi_initial.png, id=370, 1129.21875pt x 2445.135pt>
 File: ./images/navi_initial.png Graphic file (type png)
 <use ./images/navi_initial.png>
-Package pdftex.def Info: ./images/navi_initial.png  used on input line 139.
+Package pdftex.def Info: ./images/navi_initial.png  used on input line 141.
 (pdftex.def)             Requested size: 157.67601pt x 341.43306pt.
 
-[24]
-<./images/navi_route_marked.png, id=376, 1129.21875pt x 2445.135pt>
+[25]
+<./images/navi_route_marked.png, id=381, 1129.21875pt x 2445.135pt>
 File: ./images/navi_route_marked.png Graphic file (type png)
 <use ./images/navi_route_marked.png>
-Package pdftex.def Info: ./images/navi_route_marked.png  used on input line 145
+Package pdftex.def Info: ./images/navi_route_marked.png  used on input line 147
 .
 (pdftex.def)             Requested size: 157.67601pt x 341.43306pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25 <./images/navi_initial.png>]
-<./images/navi_reach_start.png, id=383, 1129.21875pt x 2445.135pt>
+ [26 <./images/navi_initial.png>]
+<./images/navi_reach_start.png, id=387, 1129.21875pt x 2445.135pt>
 File: ./images/navi_reach_start.png Graphic file (type png)
 <use ./images/navi_reach_start.png>
-Package pdftex.def Info: ./images/navi_reach_start.png  used on input line 151.
+Package pdftex.def Info: ./images/navi_reach_start.png  used on input line 153.
 
 (pdftex.def)             Requested size: 157.67601pt x 341.43306pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26 <./images/navi_route_marked.png>]
-<./images/navi_guidance.png, id=389, 2409.0pt x 2445.135pt>
+ [27 <./images/navi_route_marked.png>]
+<./images/navi_guidance.png, id=393, 2409.0pt x 2445.135pt>
 File: ./images/navi_guidance.png Graphic file (type png)
 <use ./images/navi_guidance.png>
-Package pdftex.def Info: ./images/navi_guidance.png  used on input line 157.
+Package pdftex.def Info: ./images/navi_guidance.png  used on input line 159.
 (pdftex.def)             Requested size: 336.3755pt x 341.43306pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27 <./images/navi_reach_start.png>] [28 <./images/navi_guidance.png>]
+ [28 <./images/navi_reach_start.png>] [29 <./images/navi_guidance.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29]
-[30]
-<./images/web_form.png, id=408, 1128.215pt x 718.685pt>
+ [30]
+[31]
+<./images/web_form.png, id=413, 1128.215pt x 718.685pt>
 File: ./images/web_form.png Graphic file (type png)
 <use ./images/web_form.png>
-Package pdftex.def Info: ./images/web_form.png  used on input line 203.
+Package pdftex.def Info: ./images/web_form.png  used on input line 205.
 (pdftex.def)             Requested size: 455.24411pt x 289.99113pt.
-<./images/web_map.png, id=409, 1128.215pt x 717.68124pt>
+<./images/web_map.png, id=414, 1128.215pt x 717.68124pt>
 File: ./images/web_map.png Graphic file (type png)
 <use ./images/web_map.png>
-Package pdftex.def Info: ./images/web_map.png  used on input line 209.
+Package pdftex.def Info: ./images/web_map.png  used on input line 211.
 (pdftex.def)             Requested size: 455.24411pt x 289.58612pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31 <./images/web_form.png>]) [32 <./images/web_map.png>]
+ [32 <./images/web_form.png>]) [33 <./images/web_map.png>]
 \openout2 = `rozdzial6.aux'.
 
- (./rozdzial6.tex
+ (./rozdzial6.tex [34
+
+
+
+]
 Rozdzia\l  6.
-<./images/czas_dijkstra_vs_a.png, id=421, 911.405pt x 562.1pt>
+<./images/czas_dijkstra_vs_a.png, id=430, 911.405pt x 562.1pt>
 File: ./images/czas_dijkstra_vs_a.png Graphic file (type png)
 <use ./images/czas_dijkstra_vs_a.png>
 Package pdftex.def Info: ./images/czas_dijkstra_vs_a.png  used on input line 15
@@ -1509,19 +1540,15 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 15--16
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [33
-
-
-
-]
-[34 <./images/czas_dijkstra_vs_a.png>]
-<./images/a_a_dlugosc_trasy.png, id=432, 731.73375pt x 452.69125pt>
+ [35]
+[36 <./images/czas_dijkstra_vs_a.png>]
+<./images/a_a_dlugosc_trasy.png, id=440, 731.73375pt x 452.69125pt>
 File: ./images/a_a_dlugosc_trasy.png Graphic file (type png)
 <use ./images/a_a_dlugosc_trasy.png>
 Package pdftex.def Info: ./images/a_a_dlugosc_trasy.png  used on input line 34.
 
 (pdftex.def)             Requested size: 455.24411pt x 281.63963pt.
-<./images/dijkstra_a_dlugosc_trasy.png, id=433, 731.73375pt x 452.69125pt>
+<./images/dijkstra_a_dlugosc_trasy.png, id=441, 731.73375pt x 452.69125pt>
 File: ./images/dijkstra_a_dlugosc_trasy.png Graphic file (type png)
 <use ./images/dijkstra_a_dlugosc_trasy.png>
 Package pdftex.def Info: ./images/dijkstra_a_dlugosc_trasy.png  used on input l
@@ -1530,8 +1557,8 @@ ine 38.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35 <./images/a_a_dlugosc_trasy.png>]
-<./images/waga_a_vs_a_greedy.png, id=439, 900.36375pt x 556.0775pt>
+ [37 <./images/a_a_dlugosc_trasy.png>]
+<./images/waga_a_vs_a_greedy.png, id=448, 900.36375pt x 556.0775pt>
 File: ./images/waga_a_vs_a_greedy.png Graphic file (type png)
 <use ./images/waga_a_vs_a_greedy.png>
 Package pdftex.def Info: ./images/waga_a_vs_a_greedy.png  used on input line 50
@@ -1540,8 +1567,8 @@ Package pdftex.def Info: ./images/waga_a_vs_a_greedy.png  used on input line 50
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [36 <./images/dijkstra_a_dlugosc_trasy.png>]
-<./images/czas_a_vs_a_greedy.png, id=445, 865.2325pt x 536.0025pt>
+ [38 <./images/dijkstra_a_dlugosc_trasy.png>]
+<./images/czas_a_vs_a_greedy.png, id=454, 865.2325pt x 536.0025pt>
 File: ./images/czas_a_vs_a_greedy.png Graphic file (type png)
 <use ./images/czas_a_vs_a_greedy.png>
 Package pdftex.def Info: ./images/czas_a_vs_a_greedy.png  used on input line 58
@@ -1550,8 +1577,8 @@ Package pdftex.def Info: ./images/czas_a_vs_a_greedy.png  used on input line 58
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37 <./images/waga_a_vs_a_greedy.png>]
-<./images/czas_a_vs_nba.png, id=452, 924.45375pt x 572.1375pt>
+ [39 <./images/waga_a_vs_a_greedy.png>]
+<./images/czas_a_vs_nba.png, id=460, 924.45375pt x 572.1375pt>
 File: ./images/czas_a_vs_nba.png Graphic file (type png)
 <use ./images/czas_a_vs_nba.png>
 Package pdftex.def Info: ./images/czas_a_vs_nba.png  used on input line 69.
@@ -1559,38 +1586,17 @@ Package pdftex.def Info: ./images/czas_a_vs_nba.png  used on input line 69.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [38 <./images/czas_a_vs_a_greedy.png>]
-<./images/google_vs_algo_najkrotsza.png, id=458, 745.78625pt x 460.72125pt>
-File: ./images/google_vs_algo_najkrotsza.png Graphic file (type png)
-<use ./images/google_vs_algo_najkrotsza.png>
-Package pdftex.def Info: ./images/google_vs_algo_najkrotsza.png  used on input 
-line 79.
-(pdftex.def)             Requested size: 455.24411pt x 281.22935pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [39 <./images/czas_a_vs_nba.png>]
-<./images/google_vs_algo_najlepsza.png, id=464, 746.79pt x 460.72125pt>
-File: ./images/google_vs_algo_najlepsza.png Graphic file (type png)
-<use ./images/google_vs_algo_najlepsza.png>
-Package pdftex.def Info: ./images/google_vs_algo_najlepsza.png  used on input l
-ine 83.
-(pdftex.def)             Requested size: 455.24411pt x 280.85677pt.
-) [40 <./images/google_vs_algo_najkrotsza.png> <./images/google_vs_algo_najleps
-za.png>] [41]
+ [40 <./images/czas_a_vs_a_greedy.png>]) [41 <./images/czas_a_vs_nba.png>]
 \openout2 = `rozdzial7.aux'.
 
- (./rozdzial7.tex [42
+
+(./rozdzial7.tex [42
 
 
 
 ]
 Rozdzia\l  7.
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [43]
-[44]
+) [43]
 
 LaTeX Warning: Empty bibliography on input line 174.
 
@@ -1607,13 +1613,13 @@ Package logreq Info: Writing requests to 'praca.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30847 strings out of 492616
- 563993 string characters out of 6129482
+ 30845 strings out of 492616
+ 563709 string characters out of 6129482
  887525 words of memory out of 5000000
- 34254 multiletter control sequences out of 15000+600000
+ 34255 multiletter control sequences out of 15000+600000
  601933 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,12n,65p,1800b,2390s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 47i,12n,65p,1820b,2390s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/
 2019/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2019/te
@@ -1622,10 +1628,10 @@ st/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on praca.pdf (44 pages, 3587552 bytes).
+Output written on praca.pdf (43 pages, 3380618 bytes).
 PDF statistics:
- 539 PDF objects out of 1000 (max. 8388607)
- 446 compressed objects within 5 object streams
- 99 named destinations out of 1000 (max. 500000)
- 483 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 531 PDF objects out of 1000 (max. 8388607)
+ 443 compressed objects within 5 object streams
+ 98 named destinations out of 1000 (max. 500000)
+ 473 words of extra memory for PDF output out of 10000 (max. 10000000)
 
