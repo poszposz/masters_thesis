@@ -71,6 +71,12 @@ Na poniższym wykresie przedstawiono zestawienie czasów działania algorytmów.
 
 Z uzyskanych wyników można odczytać że algorytm NBA daje możliwość uzyskania nieznacznie mniejszych czasów obliczeń. Same różnice nie są duże, ale znikomym nakładem pozwalają nieznacznie obniżyć wykorzystanie zasobów serwera w przypadku gdy aplikacja jest używana przez znaczną ilość ludzi. Z wykresu można także odczytać nieznaczny trend w kierunku zwiększenia różnic wykonania algorytmu w przypadku gdy trasy są dłuższe. Jest to spowodowane faktem że zasoby czasowe potrzebne na alokację oraz rozpoczęcie procedury przeszukiwania grafu z obydwu stron mogą być skompensowane przez rzeczywisty zysk uzyskany przez samą procedurę przeszukiwania. Czas obliczeń dla tras o długości 800-2000m jest w przypadku obydwu algorytmów prawie taki sam.
 
+\subsection{Przeprowadzenie testu warunków skrajnych dla aplikacji serwerowej w zależności od zastosowania algorytmu A* lub NBA}
+
+Korzystając z wiedzy odnośnie czasu wykonywania oraz jakości analizowanych algorytmów, zostały z nich wybrane dwa, które gwarantują wyszukanie optymalnej ścieżki w grafie, nie tylko bliskiej rozwiązaniu optymalnemu jak w przypadku A* zachłannego, oraz gwarantują czas wykonywania umożliwiający swobodne działanie aplikacji w środowisku produkcyjnym. W tym kroku został także odrzucony algorytm Dijkstra jako że jego wykonanie uniemożliwiało swobodne korzystanie z aplikacji przez użytkowników. Dla wybranych algorytmów, A* i NBA, zostały przeprowadzone przy użyciu narzędzia Apache Benchmark testy wydajności opierające się o wykonywanie określonej dużej liczby zapytań do aplikacji serwerowej. Wyniki przeprowadzonych pomiarów, wraz z wykresem użycia zasobów CPU serwera zostały przedstawione w poniższym zestawieniu.
+
+
+
 \section{Porównanie wyników w stosunku do tras wyznaczonych przez Google Maps}
 
 W celu przedstawienia rzeczywistego kontekstu dla przeprowadzanych pomiarów, w ostatnim punkcie analizy dokonano analizy tras wyznaczanych przez stworzoną aplikację w stosunku do tych wyznaczanych przez najbardziej popularną wyszukiwarkę tras zarówno samochodowych jak i rowerowych lub pieszych oferowaną przez Google Maps. Na poniższym wykresie przedstawiono zestawienie długości wyznaczonych tras w zależności od wybranej opcji trasy, najkrótszą lub najlepszą, z odpowiadającą temu trasą Google.
