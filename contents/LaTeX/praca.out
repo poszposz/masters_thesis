@@ -45,5 +45,6 @@
 \BOOKMARK [2][-]{subsection.6.1.2}{Czas dzialania algorytmu A* i Dijkstra w zaleznosci od dlugosci trasy}{section.6.1}% 45
 \BOOKMARK [2][-]{subsection.6.1.3}{Por\363wnanie algorytmu zachlannego A* i standardowej implementacji A*}{section.6.1}% 46
 \BOOKMARK [2][-]{subsection.6.1.4}{Por\363wnanie algorytmu NBA i standardowej implementacji A*}{section.6.1}% 47
-\BOOKMARK [1][-]{section.6.2}{Por\363wnanie wynik\363w w stosunku do tras wyznaczonych przez Google Maps}{chapter.6}% 48
-\BOOKMARK [0][-]{chapter.7}{Wnioski i mozliwe dalsze usprawnienia}{}% 49
+\BOOKMARK [2][-]{subsection.6.1.5}{Przeprowadzenie testu warunk\363w skrajnych dla aplikacji serwerowej w zaleznosci od zastosowania algorytmu A* lub NBA}{section.6.1}% 48
+\BOOKMARK [1][-]{section.6.2}{Por\363wnanie wynik\363w w stosunku do tras wyznaczonych przez Google Maps}{chapter.6}% 49
+\BOOKMARK [0][-]{chapter.7}{Wnioski i mozliwe dalsze usprawnienia}{}% 50
