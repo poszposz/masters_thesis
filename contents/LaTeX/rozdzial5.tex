@@ -38,9 +38,11 @@ Przykładowe zapytanie HTTP GET w celu uzyskania odpowiedzi zawierającej optyma
 
 Przykładową odpowiedź, skróconą do postaci przedstawiającej jej formę przedstawiono poniżej.
 
-\begin{center}
+\begin{figure}[H]
+\centering
 \includegraphics[height=12cm]{api_response_json}
-\end{center}
+\caption{Przykładowa odpowiedź na zapytanie serwera pod endpoint findOptimized.}
+\end{figure}
 
 \item Endpoint visualizationPoints:
 
@@ -59,9 +61,11 @@ Przykładowe zapytanie HTTP GET w celu uzyskania odpowiedzi zawierającej optyma
 
 Przykładową odpowiedź, skróconą do postaci przedstawiającej jej formę przedstawiono poniżej:
 
-\begin{center}
+\begin{figure}[H]
+\centering
 \includegraphics[height=12cm]{api_response_viz_json}
-\end{center}
+\caption{Przykładowa odpowiedź na zapytanie serwera pod endpoint visualizationPoints.}
+\end{figure}
 
 \end{enumerate}
 
@@ -69,9 +73,11 @@ Przykładową odpowiedź, skróconą do postaci przedstawiającej jej formę prz
 
 W celu dodatkowej wizualizacji na poniższym schemacie blokowym przedstawiono proces wyznaczania grafu na podstawie pobranych danych geoprzestrzennych:
 
-\begin{center}
-\includegraphics[width=\textwidth]{algorytm_schemat_blokowy}
-\end{center}
+\begin{figure}[H]
+\centering
+\includegraphics[height=16cm]{algorytm_schemat_blokowy}
+\caption{Schemat blokowy algorytmu użytego do stworzenia grafu na podstawie danych geoprzestrzennych.}
+\end{figure}
 
 W celu optymalizacji czasu działania systemu, dane geoprzestrzenne są pobierane oraz przetwarzane przez aplikację tylko jeden raz, zaraz po włączeniu. Jest to czasochłonny proces, wymagający wielu iteracji po rozległym zbiorze danych. Jego rezultatem jest stworzenie grafu, który może być w kolejnych etapach wykorzystywany jako gotowa dana wejściowa. Tworzenie grafu zostaje rozpoczęte przez pobranie zestawu danych geoprzestrzennych dla miasta Kraków z portalu \textit{https://zikit.carto.com}. Pobrana baza danych zawiera zarówno trasy rowerowe, jak i drogi z ograniczeniem prędkości poniżej 50 kilometrów na godzinę, obydwie bazy są następnie scalane i przekształcane w zbiór odpowiednich dróg i segmentów. Droga jest logiczną reprezentacją krzywej poprowadzonej na mapie pomiędzy dwoma punktami, składa się z segmentów, które zawierają jedynie punkt początkowy oraz końcowy i definiują zestaw linii prostych, które mogą zostać użyte, aby narysować linię drogi na mapie. Wykorzystując metodę Haversine, zostają wyznaczone długości każdej drogi przez zsumowanie długości wszystkich segmentów, które się na nią składają. \newline
 Kolejnym etapem jest proces przygotowywania dróg do procesu tworzenia grafu. Aby mieć pewność, że wszystkie przyległości zostaną poprawnie odnalezione, w pierwszym kroku należy odpowiednio podzielić wszystkie pobrane drogi na takie o mniejszej długości. Trasy pobrane z serwisu Carto mają bardzo losowe długości oraz są zaznaczone w taki sposób, że nie występuje segmentacja w okolicach końców innych tras oraz przy przecięciach z nimi. Z tego powodu wyznaczenie poprawnego grafu z uzyskanych danych wymaga wcześniejszego przetworzenia. Pierwszym krokiem przetwarzania danych jest podzielenie segmentów uzyskanych z przeanalizowanych, pobranych danych na takie, które mają maksymalnie trzy metry długości. Dzieje się to przez podział każdego segmentu na pół do momentu aż osiągną one pożądaną długość. W następnej kolejności, gdy posiadamy już podzielone segmenty, następuje podzielenie tras. Dzieje się to na zasadzie podzielenia tablicy segmentów na części o określonej długości a następnie utworzenia zestawu nowych dróg z uzyskanych części. Każda droga, stworzona przez podzielenie innej drogi na mniejsze części, posiada także przypisanie swojego "rodzica", czyli pierwotnej drogi z której nastąpił podział. Droga, będąca "rodzicem", posiada za to tablicę zawierająca wszystkie drogi będące jej "dziećmi". Na tym etapie następuje także przypisanie drodze odpowiedniej wagi oraz stwierdzenie czy droga przebiega po moście - jest to stwierdzane na podstawie wykrycia słów kluczowych „most” lub „kladka” w nazwie trasy. Niestety baza danych carto ZiKiT nie oferuje w swoich danych takich informacji, dlatego też występuje potrzeba przewidzenia tej danej w inny sposób. \newline
@@ -130,34 +136,41 @@ Za zarządzanie danymi oraz stanem aplikacji odpowiada klasa NavigationManager, 
 \item Na poniższej ilustracji przedstawiono schemat działania aplikacji razem z interakcjami pomiędzy jej komponentami:
 \end{enumerate}
 
-// tutaj idzie schemat aplikacji.
-
 \subsection{Spis ekranów i stanów aplikacji}
 
 Zaimplementowana aplikacja mobilna składa się z zestawu ekranów które umożliwiają użytkownikowi intuicyjne wprowadzenie parametrów trasy oraz przejście przez każdy stan nawigacji aż do doprowadzenia do końca trasy. W poniższych akapitach zestawiono przykładowe ekrany aplikacji wraz z opisem ich celu i możliwych interakcji ze strony użytkownika.
 Bezpośrednio po wejściu do aplikacji, użytkownikowi zostaje przedstawiony ekran z mapą oraz dwoma polami tekstowymi, każde z nich posiada placeholder w celu zasugerowania którą z wartości należy wpisać. Po prawej stronie pola tekstowego służącego do pisania adresu początkowego znajduje się przycisk lokalizowania użytkownika. Po kliknięciu aplikacja pobiera z modułu GPS aktualną pozycję użytkownika, a następnie używając wbudowanej w iOS SDK klasy CLGeocoder wykonuje translację współrzędnych geograficznych na tekstową reprezentację adresu. Wyznaczony adres zostaje wpisany w pole tekstowe. Na poniższej ilustracji przedstawiono ekran początkowy w stanie gdy nie ma wprowadzonych danych.
 
-\begin{center}
-\includegraphics[height=12cm]{navi_initial}
-\end{center}
+\begin{figure}[H]
+\centering
+\includegraphics[height=9cm]{navi_initial}
+\caption{Ekran początkowy aplikacji z możliwością wpisania punktów startowego i końcowego.}
+\end{figure}
 
 Po wprowadzeniu punktów końcowych trasy, następuje jej wyszukanie, w tym celu aplikacji przygotowuje zapytanie pod endpoint „findOptimized” przekazując dane wpisane w polach tekstowych, a na czas ładowania odpowiedzi wyświetla indykator ładowania na górnym panelu oraz blokuje interakcje użytkownika ze wszystkimi elementami interfejsu użytkownika poza mapą. Po pobraniu trasy jest ona przekształcana na modele po stronie aplikacji oraz rysowana na mapie. Linią ciągłą zaznaczona jest trasa, linią przerywaną odcinki poza trasowe które trzeba pokonać aby dostać się z aktualnej lokalizacji użytkownika do początku trasy oraz z końca trasy do punktu końcowego wprowadzonego przez użytkownika. W celu odpowiedniej wizualizacji, po narysowaniu mapa jest odpowiednio przybliżana aby pokazać użytkownikowi przebieg całej trasy od jej początku do końca. Ekran z narysowaną mapą przedstawiono na poniższej ilustracji.
 
-\begin{center}
-\includegraphics[height=12cm]{navi_route_marked}
-\end{center}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[height=9cm]{navi_route_marked}
+	\end{center}
+	\caption{Ekran aplikacji mobilnej podczas prezentacji wyznaczonej trasy.}
+\end{figure}
 
 Po wciśnięciu przycisku nawiguj zostaje włączony proces nawigacji użytkownika po trasie. W pierwszej fazie jest to prowadzenie do początku trasy, mapa zostaje odpowiednio przybliżona aby objąć trasę z punktu początkowego na początek trasy, lokalizacja użytkownika jest przedstawiona w postaci standardowego punkty na mapie obsługiwanego przez bibliotekę MapKit.
 
-\begin{center}
-\includegraphics[height=12cm]{navi_reach_start}
-\end{center}
+\begin{figure}[H]
+\centering
+\includegraphics[height=9cm]{navi_reach_start}
+\caption{Ekran aplikacji mobilnej w stanie w którym użytkownik ma za zadanie dotrzeć do początku trasy.}
+\end{figure}
 
 Po dojściu użytkownika w obręb wyznaczonej trasy, interfejs użytkownika rozpoczyna nawigowanie go po trasie. Punkt wyznaczający aktualną lokalizację jest co sekundę animowanie przesuwany na pozycję na trasie odpowiadającą najbliższemu segmentowi w stosunku do rzeczywistej pozycji użytkownika na mapie. W przypadku wykrycia przez aplikację zakrętu w obrębie około najbliższych 200 metrów, na górnym panelu jest wyświetlana wskazówka zawierająca kierunek zakrętu oraz aktualną odległość po której wystąpi. W przypadku gdy użytkownik zjedzie z trasy, na górnym panelu jest przedstawiona instrukcja sugerująca powrót na trasę, zaś gdy oddali się od niej za daleko, instrukcja zmienia się w informację o wyznaczaniu nowej trasy do punktu końcowego.
 
-\begin{center}
-\includegraphics[height=12cm]{navi_guidance}
-\end{center}
+\begin{figure}[H]
+\centering
+\includegraphics[height=9cm]{navi_guidance}
+\caption{Ekrany aplikacji mobilnej przedstawiające wskazówki nawigacji podczas poruszania się po trasie.}
+\end{figure}
 
 \subsection{Opis działania nawigacji}
 
@@ -189,8 +202,6 @@ Do testów działania nawigacji zostały wykorzystane pliki GPX(GPS Exchange For
 
 \section{Opis stworzonej strony internetowej}
 
-
-
 \subsection{Opis technologii i użytych bibliotek}
 
 W ramach projektu została zaimplementowana także strona internetowa, która w intuicyjny sposób pozwala użytkownikowi wyszukać trasę pomiędzy wpisanymi adresami oraz wyświetla ją na mapie. 
@@ -201,12 +212,16 @@ W projekcie strony internetowej, do zarządzania zewnętrznymi zależnościami u
 
 Aplikacja jest bardzo prosta, składa się z dwóch ekranów. Na pierwszym z nich są przedstawione dwa pola tekstowe oraz przycisk umożliwiający wyszukanie trasy, jego wygląd przedstawiono na poniższej ilustracji.
 
-\begin{center}
+\begin{figure}[H]
+\centering
 \includegraphics[width=\textwidth]{web_form}
-\end{center}
+\caption{Ekran domowy strony internetowej.}
+\end{figure}
 
 Kolejny z ekranów ma zaimplementowaną logikę pobierania trasy w zależności od stanu przekazanego do niego z ekranu wpisywania danych. Wykorzystując bibliotekę axios wykonuje zapytanie pod endpoint „visualizationPoints” zawierając w kwerendzie wymagane dane. Zwrócona odpowiedź w formacie JSON zawiera zbiór wszystkich punktów na mapie który należy ze sobą połączyć aby przestawić użytkownikowi wizualizację wyznaczonej ścieżki. Ścieżka jest przedstawiona na mapie obejmującej całość ekranu.
 
-\begin{center}
+\begin{figure}[H]
+\centering
 \includegraphics[width=\textwidth]{web_map}
-\end{center}
+\caption{Ekran strony internetowej z zaznaczoną trasą.}
+\end{figure}
