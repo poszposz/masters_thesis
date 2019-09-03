@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.9.1)  3 SEP 2019 22:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.9.1)  3 SEP 2019 23:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1451,12 +1451,12 @@ Package pdftex.def Info: ./images/api_response_viz_json.png  used on input line
  66.
 (pdftex.def)             Requested size: 179.99745pt x 341.43306pt.
 [18 <./images/api_response_json.png>]
-<./images/algorytm_schemat_blokowy.png, id=349, 630.355pt x 824.07875pt>
+<./images/algorytm_schemat_blokowy.png, id=349, 509.905pt x 824.07875pt>
 File: ./images/algorytm_schemat_blokowy.png Graphic file (type png)
 <use ./images/algorytm_schemat_blokowy.png>
 Package pdftex.def Info: ./images/algorytm_schemat_blokowy.png  used on input l
 ine 78.
-(pdftex.def)             Requested size: 348.22565pt x 455.24408pt.
+(pdftex.def)             Requested size: 281.68571pt x 455.24408pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1536,95 +1536,91 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 Rozdzia\l  6.
-<./images/czas_dijkstra_vs_a.png, id=445, 911.405pt x 562.1pt>
+<./images/czas_dijkstra_vs_a.png, id=445, 911.405pt x 485.815pt>
 File: ./images/czas_dijkstra_vs_a.png Graphic file (type png)
 <use ./images/czas_dijkstra_vs_a.png>
 Package pdftex.def Info: ./images/czas_dijkstra_vs_a.png  used on input line 17
 .
-(pdftex.def)             Requested size: 455.24411pt x 280.77484pt.
+(pdftex.def)             Requested size: 318.66948pt x 169.8673pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [35]
-[36 <./images/czas_dijkstra_vs_a.png>]
-<./images/a_a_dlugosc_trasy.png, id=456, 731.73375pt x 452.69125pt>
+<./images/a_a_dlugosc_trasy.png, id=450, 731.73375pt x 388.45125pt>
 File: ./images/a_a_dlugosc_trasy.png Graphic file (type png)
 <use ./images/a_a_dlugosc_trasy.png>
 Package pdftex.def Info: ./images/a_a_dlugosc_trasy.png  used on input line 39.
 
-(pdftex.def)             Requested size: 455.24411pt x 281.63963pt.
-<./images/dijkstra_a_dlugosc_trasy.png, id=457, 731.73375pt x 452.69125pt>
+(pdftex.def)             Requested size: 318.66948pt x 169.17052pt.
+
+Underfull \vbox (badness 4467) has occurred while \output is active []
+
+ [36 <./images/czas_dijkstra_vs_a.png>]
+<./images/dijkstra_a_dlugosc_trasy.png, id=457, 731.73375pt x 383.4325pt>
 File: ./images/dijkstra_a_dlugosc_trasy.png Graphic file (type png)
 <use ./images/dijkstra_a_dlugosc_trasy.png>
 Package pdftex.def Info: ./images/dijkstra_a_dlugosc_trasy.png  used on input l
 ine 45.
-(pdftex.def)             Requested size: 455.24411pt x 281.63963pt.
+(pdftex.def)             Requested size: 318.66948pt x 166.98486pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1454) has occurred while \output is active []
 
- [37 <./images/a_a_dlugosc_trasy.png>]
-<./images/waga_a_vs_a_greedy.png, id=465, 900.36375pt x 556.0775pt>
+ [37 <./images/a_a_dlugosc_trasy.png> <./images/dijkstra_a_dlugosc_trasy.png>]
+<./images/waga_a_vs_a_greedy.png, id=467, 900.36375pt x 473.77pt>
 File: ./images/waga_a_vs_a_greedy.png Graphic file (type png)
 <use ./images/waga_a_vs_a_greedy.png>
 Package pdftex.def Info: ./images/waga_a_vs_a_greedy.png  used on input line 59
 .
-(pdftex.def)             Requested size: 455.24411pt x 281.16905pt.
-
-Underfull \vbox (badness 1430) has occurred while \output is active []
-
- [38 <./images/dijkstra_a_dlugosc_trasy.png>]
-<./images/czas_a_vs_a_greedy.png, id=472, 865.2325pt x 536.0025pt>
+(pdftex.def)             Requested size: 318.66948pt x 167.67987pt.
+<./images/czas_a_vs_a_greedy.png, id=468, 865.2325pt x 457.71pt>
 File: ./images/czas_a_vs_a_greedy.png Graphic file (type png)
 <use ./images/czas_a_vs_a_greedy.png>
 Package pdftex.def Info: ./images/czas_a_vs_a_greedy.png  used on input line 69
 .
-(pdftex.def)             Requested size: 455.24411pt x 282.01894pt.
+(pdftex.def)             Requested size: 318.66948pt x 168.57481pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [39 <./images/waga_a_vs_a_greedy.png>]
-<./images/czas_a_vs_nba.png, id=479, 924.45375pt x 572.1375pt>
+ [38 <./images/waga_a_vs_a_greedy.png>]
+<./images/czas_a_vs_nba.png, id=475, 924.45375pt x 486.81876pt>
 File: ./images/czas_a_vs_nba.png Graphic file (type png)
 <use ./images/czas_a_vs_nba.png>
 Package pdftex.def Info: ./images/czas_a_vs_nba.png  used on input line 82.
-(pdftex.def)             Requested size: 455.24411pt x 281.74664pt.
+(pdftex.def)             Requested size: 318.66948pt x 167.81151pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [40 <./images/czas_a_vs_a_greedy.png>]
+ [39 <./images/czas_a_vs_a_greedy.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41 <./images/czas_a_vs_nba.png>]
-<./images/google_vs_algo_najkrotsza.png, id=492, 745.78625pt x 460.72125pt>
+ [40 <./images/czas_a_vs_nba.png>]
+<./images/google_vs_algo_najkrotsza.png, id=488, 745.78625pt x 374.90062pt>
 File: ./images/google_vs_algo_najkrotsza.png Graphic file (type png)
 <use ./images/google_vs_algo_najkrotsza.png>
 Package pdftex.def Info: ./images/google_vs_algo_najkrotsza.png  used on input 
 line 98.
-(pdftex.def)             Requested size: 455.24411pt x 281.22935pt.
-<./images/google_vs_algo_najlepsza.png, id=493, 746.79pt x 460.72125pt>
+(pdftex.def)             Requested size: 318.66948pt x 160.19159pt.
+<./images/google_vs_algo_najlepsza.png, id=489, 746.79pt x 372.89313pt>
 File: ./images/google_vs_algo_najlepsza.png Graphic file (type png)
 <use ./images/google_vs_algo_najlepsza.png>
 Package pdftex.def Info: ./images/google_vs_algo_najlepsza.png  used on input l
 ine 104.
-(pdftex.def)             Requested size: 455.24411pt x 280.85677pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [42 <./images/google_vs_algo_najkrotsza.png>]) [43 <./images/google_vs_algo_na
-jlepsza.png>]
+(pdftex.def)             Requested size: 318.66948pt x 159.11758pt.
+) [41 <./images/google_vs_algo_najkrotsza.png> <./images/google_vs_algo_najleps
+za.png>] [42]
 \openout2 = `rozdzial7.aux'.
 
- (./rozdzial7.tex [44
-
-
-
-]
+ (./rozdzial7.tex
 Rozdzia\l  7.
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [45]
-[46]
+ [43
+
+
+
+]
+[44]
 
 LaTeX Warning: Empty bibliography on input line 175.
 
@@ -1636,13 +1632,17 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 177.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 177.
 Package rerunfilecheck Info: File `praca.out' has not changed.
 (rerunfilecheck)             Checksum: 8052AAF99AD6F2FDD7CA48D1494D7D7B;4144.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'praca.run.xml'.
 \openout1 = `praca.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30930 strings out of 492616
- 565165 string characters out of 6129482
+ 30928 strings out of 492616
+ 565151 string characters out of 6129482
  888947 words of memory out of 5000000
  34312 multiletter control sequences out of 15000+600000
  604736 words of font info for 93 fonts, out of 8000000 for 9000
@@ -1656,10 +1656,10 @@ st/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on praca.pdf (46 pages, 3592602 bytes).
+Output written on praca.pdf (44 pages, 3487702 bytes).
 PDF statistics:
- 574 PDF objects out of 1000 (max. 8388607)
- 479 compressed objects within 5 object streams
- 119 named destinations out of 1000 (max. 500000)
+ 566 PDF objects out of 1000 (max. 8388607)
+ 473 compressed objects within 5 object streams
+ 117 named destinations out of 1000 (max. 500000)
  491 words of extra memory for PDF output out of 10000 (max. 10000000)
 
