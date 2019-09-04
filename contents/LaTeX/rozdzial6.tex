@@ -19,17 +19,7 @@ Na poniższym wykresie zestawiono czasy działania obydwu algorytmów wraz z opi
 \end{figure}
 
 Z wykresu można odczytać, że algorytm A* sprawdza się nieporównywalnie lepiej w stosunku do algorytmu Dijkstra w kontekście czasu wykonania. Z wykresu niełatwo jest nawet odczytać różnice w czasie działania ze względu na minimalny wkład czasów osiągniętych przez A*. W najgorszym z zaprezentowanych przypadków jego działanie było około 200-krotnie szybsze, zaś w najlepszym z przypadków różnica w prędkości działania była prawie 500-krotna. Z powyższego zestawienia jasno wynika, że do produkcyjnego zastosowania w aplikacji, w porównaniu z algorytmem Dijkstra, nadaje się tylko algorytm A*. Jest on za to znacznie bardziej czasochłonny w implementacji, stąd jego zastosowanie do zdecydowanie mniej złożonych grafów może być korzystniejsze. W celu zminimalizowania czasu wykonywania algorytmu Dijkstra można było zastosować odpowiednie zmniejszenie grafu na podstawie filtracji wierzchołków, które znajdują się wewnątrz obszaru na mapie zawartego przez punkt końcowy i początkowy. Jednak ze względu na brak potrzeby optymalizacji i odpowiednią wizualizację różnic czasu działania zaniechano tej modyfikacji.
-W przypadku przeszukiwania grafu, w którym wierzchołki mogą być określone jako punkty na mapie, algorytm A* jest zdecydowanie szybszy ze względu na prostotę wyznaczenia heurystyki. W tym wypadku przewidywanie czy droga zbliża się do końca może być określone przez wyznaczenie odległości pomiędzy kolejnym sprawdzanym wierzchołkiem a punktem końcowym trasy. Dzięki temu, w przeciwieństwie do algorytmu Dijkstra, A* nie prowadzi przeszukania całego grafu przed wyznaczeniem optymalnej ścieżki, a ogranicza się jedynie do przeszukania szeregu dróg które prowadzą pomiędzy punktem końcowym i początkowym. \newline
-
-Ogólną złożoność obliczeniową algorytmu A* przedstawiono poniższym wzorem.
-
-// tutaj wzór na złożoność ogólną A*
-
-Dla przykładu algorytmu użytego w aplikacji może zostać wyznaczona wzorem:
-
-// tutaj wzór na złożoność A* w tym przypadku.
-
-Na podstawie wzoru widać, że złożoność algorytmu A* w dużej mierze zależy od złożoności obliczeniowej wyznaczenia heurystyki. W przypadku, gdy proces ten przedstawiałby się złożonością obliczeniową O(n2), algorytm działałby z prędkością porównywalną do algorytmu Dijkstra.
+W przypadku przeszukiwania grafu, w którym wierzchołki mogą być określone jako punkty na mapie, algorytm A* jest zdecydowanie szybszy ze względu na prostotę wyznaczenia heurystyki. W tym wypadku przewidywanie czy droga zbliża się do końca może być określone przez wyznaczenie odległości pomiędzy kolejnym sprawdzanym wierzchołkiem a punktem końcowym trasy z wyjątkowo małą złożonością obliczeniową, nie wymagającą dodatkowych iteracji po wierzchołkach czy krawędziach grafu. Dzięki temu, w przeciwieństwie do algorytmu Dijkstra, A* nie prowadzi przeszukania całego grafu przed wyznaczeniem optymalnej ścieżki, a ogranicza się jedynie do przeszukania szeregu dróg które prowadzą pomiędzy punktem końcowym i początkowym. \newline
 
 \subsection{Czas działania algorytmu A* i Dijkstra w zależności od długości trasy}
 
