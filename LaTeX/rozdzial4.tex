@@ -81,13 +81,15 @@ gdzie
 	\item[$E$] liczba krawędzi w grafie 
 \end{eqwhere}
 
+W aplikacjach, w celach porównawczych, zaimplementowano jeszcze kilka innych metod wyznaczania najkrótszych ścieżek. Wszystkie jednak są pewnymi modyfikacjami algorytmu A*, a różnice zostały opisane podczas analizy.
+
 \section{Metoda Haversine}
 
 Metoda Haversine jest algorytmem służącym do wyznaczania odległości w linii prostej pomiędzy dwoma punktami znajdującymi się na sferze. W przypadku projektu będącego częścią tej pracy została wykorzystana do wyznaczania odległości pomiędzy punktami na mapie. Wyznaczone odległości zakładają pewną niedokładność, jako że ziemia nie jest idealną sferą. Jednak średni błąd wyznaczenia odległości przy użyciu metody Haversine jest tak mały że może zostać zignorowany przy założeniu skali długości wyznaczanych dróg mających zazwyczaj kilkaset lub więcej metrów długości.\newline
 Obliczenia odległości sprowadzają się do rozwiązania równania (4.3)
 
 \begin{equation}
-d=2*r*arcsin*(\sqrt{sin^2(\frac{\varphi_{2}-\varphi_{1}}{2}) + cos(\varphi)*cos(\varphi)*sin^2(\frac{\lambda_{2}-\lambda_{1}}{2})})
+d=2*r*arcsin*\sqrt{sin^2(\frac{\varphi_{2}-\varphi_{1}}{2}) + cos(\varphi)*cos(\varphi)*sin^2(\frac{\lambda_{2}-\lambda_{1}}{2})}
 \end{equation}
 gdzie
 \begin{eqwhere}[2cm]
