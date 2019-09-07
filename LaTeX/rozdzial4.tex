@@ -16,7 +16,7 @@ Internet jest obecnie tak powszechnym medium, że wiele ludzi w ogóle nie wyobr
 
 \subsection{Przeglądarki web na popularne systemy operacyjne}
 
-Najpopularniejszymi obecnie przeglądarkami na świecie są Google Chrome, Safari, Mozilla Firefox, UC Browser, Samsung Internet Browser, Opera, Internet Explorer oraz Edge. Zmianę ich rynkowego udziału w ostatniej dekadzie widać na obrazku 
+Najpopularniejszymi obecnie przeglądarkami na świecie są Google Chrome, Safari, Mozilla Firefox, UC Browser, Samsung Internet Browser, Opera, Internet Explorer oraz Edge. Zmianę ich rynkowego udziału w ostatniej dekadzie widać na obrazku Rys. 4.1.
 
 \begin{figure}[H]
 \centering
@@ -37,7 +37,27 @@ Nie ma chyba ważniejszego aspektu w przypadku jakiejkolwiek aplikacji mającej 
 \subsection{Dane urzędu miasta krakowa na temat ścieżek rowerowych (CartoDB)}
 
 Głównym źródłem danych, którymi posiłkuje się stworzona aplikacja, są te na temat infrastruktury rowerowej miasta Krakowa autorstwa ZIKiTu. Dane te zebrane są w formie zbioru danych CartoDB. Jest on licencjonowany i dostarczany w tzw. modelu SaaS (z ang. Software as a Service) polegającym na subskrypcji centralnie hostowanej usługi. CartoDB idealnie nadaje się do przechowywania danych geoprzestrzennych, gdyż dokładnie w tym celu został zaprojektowany i stworzony. Opiera się on na relacyjnych bazach danych PsotgreSQL oraz PostGIS, która to dodaje do tej pierwszej obsługę danych geograficznych, dzięki czemu CartoDB obsługuje wiele formatów danych wejściowych. W realizacji projektu wykorzystano również język JavaScript (w części front-endowej aplikacji webowej) oraz Node.js (w bibliotekach oraz back-endowym API). Kreacja bazy danych przy pomocy CartoDB możliwa jest w sposób wizualny, to jest po prostu zaznaczając konkretne dane bezpośrednio na mapie. Jest to niewątpliwe sporą zaletą, gdyż ułatwia niedoświadczonym użytkownikom stworzenie bazy, a z drugiej strony także i wadą, gdyż powoduje takie problemy jak np. rozbieżność punktów sąsiadujących ze sobą elementów spowodowane zaznaczeniem minimalnie innych danych (rozdzielczość koordynat na mapie jest bardzo duża, więc nawet bardzo małe przesunięcie w miejscu na mapie, skutkuje innymi współrzędnymi geograficznymi).\newline
-Same dane zostały ZIKiTu obejmują swym zasięgiem jedynie gminę Kraków, lecz są całkiem obszerne, dokładne i regularnie aktualizowane. Niestety można zauważyć pewien problem – a przynajmniej problem z punktu widzenia programisty chcącego stworzyć poprawny graf relacji opierając się na danych z niniejszej bazy – wynikający ze wspomnianego wcześniej graficznego tworzenia bazy. Otóż każda ulica czy ścieżka składa się w niej ze zbioru punktów, każdy określony współrzędnymi geograficznymi. Taki zbiór punktów nazywamy segmentem. Pierwszą niedogodnością jest fakt, że współrzędnego geograficzne punktów początkowych różnych segmentów w miejscu ich skrzyżowania delikatnie się od siebie różnią. W terenie różnice te sięgają co najwyżej kilku centymetrów, jednak od strony projektowej powodują konieczność wprowadzenia promienia wyszukiwania sąsiadujących punktów w momencie skrzyżowania się segmentów, gdyż bez tego nie dałoby się stworzyć spójnego grafu (precyzyjnie ujmując zawierałby on ledwie jeden segment – ten pierwszy, gdyż teoretycznie żaden segment nie byłby połączony z innym). Jednak powyższe zjawisko samo w sobie nie wydaje się nastręczać ogromnych problemów, zdecydowanie gorzej jest gdy dodamy do niego drugą wadę. Mianowicie punkty wchodzące w skład segmentu są definiowane tylko w przypadku, gdy segment, na który się składają, ulega zmianie kierunku w sensie geograficznym. Innymi słowy jeśli segment (czyli ulica lub ścieżka itp.) jest na jakimś swym odcinku poprowadzona idealnie na wprost, to baza zawiera jedynie punkt początkowy i końcowy takiego fragmentu. Oczywiście takie rozwiązanie jest sensowne i w normalnych przypadkach nie powoduje żadnych negatywnych konsekwencji. Jednak, jeżeli np. w połowie tego idealnie prostego fragmentu znajduje się skrzyżowanie z innym segmentem, to zbudowanie grafu relacji zaczyna być niemałym wyzwaniem. 
+Same dane ZIKiTu obejmują swym zasięgiem jedynie gminę Kraków, lecz są całkiem obszerne, dokładne i regularnie aktualizowane. Poniżej można zobaczyć strukturę pojedynczego rekordy z niniejszej bazy na przykładzie Małego Rynku: \newline
+
+\lstset{language=XML}
+\begin{lstlisting}
+<Placemark>
+<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+ <ExtendedData><SchemaData schemaUrl="\#infrastruktura_rowerowa_06_2018">
+  <SimpleData name="cartodb_id">640</SimpleData>
+  <SimpleData name="kategoria">c16t22-e</SimpleData>
+  <SimpleData name="opis">Maly Rynek</SimpleData>
+  <SimpleData name="dlugosc"></SimpleData>
+  <SimpleData name="data"></SimpleData>
+  <SimpleData name="szerokosc"></SimpleData>
+  <SimpleData name="nawierzchnia">kostka brukowa</SimpleData>
+  <SimpleData name="informacje_dodatkowe">kontraruch od Mikołajskiej do Siennej </SimpleData>
+ </SchemaData></ExtendedData>
+<MultiGeometry><LineString><coordinates>19.939853,50.060845 19.940441,50.06162 19.940424,50.061682</coordinates></LineString></MultiGeometry>
+</Placemark>\newline
+\end{lstlisting}
+
+Niestety można zauważyć pewien problem – a przynajmniej problem z punktu widzenia programisty chcącego stworzyć poprawny graf relacji opierając się na danych z niniejszej bazy – wynikający ze wspomnianego wcześniej graficznego tworzenia bazy. Otóż każda ulica czy ścieżka składa się w niej ze zbioru punktów, każdy określony współrzędnymi geograficznymi. Taki zbiór punktów nazywamy segmentem. Pierwszą niedogodnością jest fakt, że współrzędnego geograficzne punktów początkowych różnych segmentów w miejscu ich skrzyżowania delikatnie się od siebie różnią. W terenie różnice te sięgają co najwyżej kilku centymetrów, jednak od strony projektowej powodują konieczność wprowadzenia promienia wyszukiwania sąsiadujących punktów w momencie skrzyżowania się segmentów, gdyż bez tego nie dałoby się stworzyć spójnego grafu (precyzyjnie ujmując zawierałby on ledwie jeden segment – ten pierwszy, gdyż teoretycznie żaden segment nie byłby połączony z innym). Jednak powyższe zjawisko samo w sobie nie wydaje się nastręczać ogromnych problemów, zdecydowanie gorzej jest gdy dodamy do niego drugą wadę. Mianowicie punkty wchodzące w skład segmentu są definiowane tylko w przypadku, gdy segment, na który się składają, ulega zmianie kierunku w sensie geograficznym. Innymi słowy jeśli segment (czyli ulica lub ścieżka itp.) jest na jakimś swym odcinku poprowadzona idealnie na wprost, to baza zawiera jedynie punkt początkowy i końcowy takiego fragmentu. Oczywiście takie rozwiązanie jest sensowne i w normalnych przypadkach nie powoduje żadnych negatywnych konsekwencji. Jednak, jeżeli np. w połowie tego idealnie prostego fragmentu znajduje się skrzyżowanie z innym segmentem, to zbudowanie grafu relacji zaczyna być niemałym wyzwaniem. 
 
 \subsection{Dane społeczności rowerowej (DaroPlan)}
 
