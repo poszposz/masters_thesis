@@ -28,7 +28,7 @@ sorting=none,
 language=autobib,
 autolang=other,
 % Zapisuj datę dostępu do strony WWW w formacie RRRR-MM-DD.
-urldate=iso8601,
+urldate=iso,
 % Nie dodawaj numerów stron, na których występuje cytowanie.
 backref=false,
 % Podawaj ISBN.
@@ -39,9 +39,8 @@ url=false,
 % Ustawienia związane z polskimi normami dla bibliografii.
 maxbibnames=3,
 % Jeżeli używamy BibTeXa:
-backend=bibtex
+backend=biber
 ]{biblatex}
-
 \usepackage{csquotes}
 % Ponieważ `csquotes` nie posiada polskiego stylu, można skorzystać z mocno zbliżonego stylu chorwackiego.
 \DeclareQuoteAlias{croatian}{polish}
@@ -128,7 +127,7 @@ backend=bibtex
 
 \department{Katedra Telekomunikacji}
 
-\faculty{Wydział Informatyki, Elektroniki i TElekomunikacji}
+\faculty{Wydział Informatyki, Elektroniki i Telekomunikacji}
 
 \acknowledgements{Serdecznie dziękujemy dr hab. Mikołajowi Leszczukowi za nadzór i pomoc podczas tworzenia pracy.}
 
@@ -165,12 +164,7 @@ backend=bibtex
 \include{rozdzial6}
 \include{rozdzial7}
 
-
-% itd.
-% \appendix
-% \include{dodatekA}
-% \include{dodatekB}
-% itd.
+\nocite{*}
 
 \printbibliography
 
