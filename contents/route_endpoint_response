@@ -1,0 +1,59 @@
+{
+    "startLocation": {
+        "displayName": "Tyniec, Bogucianka, Tyniec, Dębniki, Kraków, małopolskie, 30-398, RP",
+        "location": {
+            "latitude": 50.0155104,
+            "longitude": 19.8088997
+        }
+    },
+    "endLocation": {
+        "displayName": "Ułanów, Ugorek, Prądnik Czerwony, Kraków, małopolskie, 31-460, Polska",
+        "location": {
+            "latitude": 50.0805099,
+            "longitude": 19.9805349
+        }
+    },
+    "totalLength": 19146.38769889126,
+    "totalWeight": 17369.43534576887,
+    "totalLengthCombined": 19146.38769889126,
+    "totalWeightCombined": 17369.43534576887,
+    "routes": [
+        {
+            "id": "9ad1f6ed-4d7a-494f-aa2f-1b7194e4a714",
+            "name": "",
+            "category": "",
+            "start": {
+                "latitude": 50.019280375,
+                "longitude": 19.80384825,
+                "stringIdentifier": "50.019280375,19.80384825"
+            },
+            "end": {
+                "latitude": 50.01954990625,
+                "longitude": 19.803496718750004,
+                "stringIdentifier": "50.01954990625,19.803496718750004"
+            },
+            "startPointVertexId": 2085,
+            "endPointVertexId": 2083,
+            "segments": [
+                {
+                    "id": "1a64e5fe-b4dd-42ac-bc90-9ab907d22872",
+                    "isBeginning": false,
+                    "isEnding": false,
+                    "start": {
+                        "latitude": 50.019280375,
+                        "longitude": 19.80384825,
+                        "stringIdentifier": "50.019280375,19.80384825"
+                    },
+                    "end": {
+                        "latitude": 50.01929425,
+                        "longitude": 19.8038375,
+                        "stringIdentifier": "50.01929425,19.8038375"
+                    },
+                    "length": 1.7234315369106317
+                },
+                { ... },
+            ]
+        },
+        { ... },
+    ]
+}
