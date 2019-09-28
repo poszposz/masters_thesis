@@ -1,6 +1,7 @@
 \chapter{Analiza otrzymanych wyników}
 \label{cha:analiza_otrzymanych_wynikow}
 
+W poniższym rozdziale skupiono się na analizie wyników uzyskanych przy użyciu różnych konfiguracji algorytmu oraz przekazanych do niego parametrów w celu oceny rozwiązania optymalnego pod kątem prędkości działania oraz użytych zasobów sprzętowych.
 
 \section{Analiza działania użytych algorytmów}
 
@@ -27,14 +28,8 @@ Na poniższych wykresach przedstawiono czas działania algorytmu A* i Dijkstra w
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{a_a_dlugosc_trasy}
-\caption{Czas wykonywania algorytmu A* w zależności od długości wyznaczonej trasy.}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.7\textwidth]{dijkstra_a_dlugosc_trasy}
-\caption{Czas wykonywania algorytmu Dijkstra w zależności od długości wyznaczonej trasy.}
+\includegraphics[width=0.7\textwidth]{a_i_dijkstra_vs_dlugosc_trasy}
+\caption{Czas wykonywania algorytmu A* oraz Dijkstra w zależności od długości wyznaczonej trasy.}
 \end{figure}
 
 Z przedstawionych wykresów można odczytać, że czas działania algorytmu Dijkstra nie zależy od długości wyznaczonych tras. Delikatne fluktuacje czasu wykonania zależą od aktualnego użycia pamięci i procesora komputera podczas wykonywania testu. Jest to spowodowane zasadą działania algorytmu Dijkstra, który w każdym przypadku w pierwszej kolejności wykonuje obliczenia najkrótszych ścieżek pomiędzy wszystkimi wierzchołkami grafu.
